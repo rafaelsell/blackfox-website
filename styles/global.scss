@@ -1,0 +1,47 @@
+@import './variables';
+@import './header';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+};
+
+body{
+    background-color: $dark-color;
+    @include fontstack($f-1x, $bold);
+}
+
+a{
+    font-style: none;
+    font-size: 2rem;
+    color: $light-color;
+    cursor: pointer;
+    transition: color ease-in-out 200ms;
+
+    &:hover{
+        color: $primary-color;
+    }
+}
+main{
+    height: 100%;    
+}
+.imagecontainer{
+    margin: 1rem 21%;
+
+    &__item{
+        height: 300px;
+        margin-top: -4px;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0;
+
+        &--landscape{
+            width: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+}

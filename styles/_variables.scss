@@ -1,0 +1,19 @@
+$primary-color: #6338CC;
+$darker-color: #12151A;
+$dark-color: #191E24;
+$light-color: #FFFFFF;
+
+$bold: 800;
+$extra-light: 200;
+$f-1x: 1rem;
+$f-2x: 2rem;
+$f-3x: 3rem;
+$f-4x: 4rem;
+
+$column-counter: 4;
+
+@mixin fontstack ($f-size, $f-weight){
+    font-size: $f-size;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $f-weight;
+}
