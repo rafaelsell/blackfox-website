@@ -12,6 +12,6 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
-    "masonry-layout": "^4.2.2"
+    "@egjs/infinitegrid": "^4.2.0"
   }
 }

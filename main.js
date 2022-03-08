@@ -1,6 +1,6 @@
 import './css/global.css';
 import data from './assets/json/data.json';
-import Masonry from 'masonry-layout';
+import { JustifiedInfiniteGrid } from "@egjs/infinitegrid";
 
 const imageContainer = document.getElementById('imagecontainer');
 
@@ -13,11 +13,15 @@ data.forEach(element => {
     imageContainer.append(image);
 });
 
-var elem = document.querySelector('.imagecontainer');
-var msnry = new Masonry(elem, {
-    // options
-    itemSelector: 'imagecontainer__item',
-    columnWidth: 120,
-    gutter: 10,
+const ig = new JustifiedInfiniteGrid(".imagecontainer", {
+    gap: 10,
+    columnRange: 4,
 });
+
+ig.on("requestAppend", (e) => {
+    const nextGroupKey = (+e.groupKey || 0) + 1;
+
+    ig.append(getItems(nextGroupKey, 10), nextGroupKey);
+});
+ig.renderItems();
 
