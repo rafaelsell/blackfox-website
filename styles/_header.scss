@@ -1,6 +1,7 @@
 @import './variables';
 
 .header{
+    position: sticky;
     background-color: $darker-color;
     height: 90px;
     width: 100%;
@@ -44,4 +45,18 @@
             font-size: 1.2rem;
         }
     }
+
+    &__menu{
+        visibility: hidden;
+    }
 }
+
+
+@media only screen and (max-width: 768px) {
+    .socialmedia__menu{
+        visibility: visible;
+    }
+    .socialmedia__item{
+        visibility: hidden;
+    }
+  }

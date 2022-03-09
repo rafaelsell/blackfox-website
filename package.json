@@ -12,6 +12,7 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
-    "@egjs/infinitegrid": "^4.2.0"
+    "@egjs/infinitegrid": "^4.2.0",
+    "zooming": "^2.1.1"
   }
 }
