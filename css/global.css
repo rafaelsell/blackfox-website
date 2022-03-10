@@ -122,10 +122,11 @@ a:hover {
 
 main {
   height: 100%;
+  margin: 0 20%;
 }
 
 .imagecontainer {
-  margin: 1rem 21%;
+  margin-top: 1rem;
 }
 
 .imagecontainer__item {
